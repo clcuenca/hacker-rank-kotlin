@@ -1,19 +1,27 @@
 /// Hacker Rank - Warmup
-/// Solve Me First
+/// Simple Array Sum
 /// Author: Carlos L. Cuenca
 /// Date: 10/22/2020
 
 /// ------------------------
 /// Function Implementations
 
-fun solveMeFirst(a: Int, b: Int): Int {
+fun simpleArraySum(array: Array<Int>): Int {
 
-	return a + b
+	var sum = 0
+
+	for(number in array) {
+
+		sum += number
+
+	}
+
+	return sum
 
 }
 
-/// --------------
-/// Driver Program
+/// -------------
+/// Drive Program
 
 fun main(args: Array<String>) {
 
@@ -23,7 +31,7 @@ fun main(args: Array<String>) {
 
 		val numbers : List<Int> = readLine()!!.split(' ').map(String::toInt)
 
-		println(solveMeFirst(numbers[0], numbers[1]))
+		println(simpleArraySum(numbers.toTypedArray()))
 
 		inputCount--
 
