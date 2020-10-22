@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
 		val alice : Array<Int> = readLine()!!.split(' ').map(String::toInt).toTypedArray()
 		val bob   : Array<Int> = readLine()!!.split(' ').map(String::toInt).toTypedArray()
 
-		println(compareTriplets(alice, bob))
+		println(compareTriplets(alice, bob).joinToString(" "))
 
 		inputCount--
 
