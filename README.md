@@ -26,15 +26,14 @@ export PATH=$PATH:"/cygdrive/C/kotlinc/bin/"
 
 ## Program Execution
 
-All programs are listed in their own directory, and within their directory there is in input.txt file
-included. 
+All programs are listed in their own directory, with an input.txt included. 
 The input.txt file contains test cases, and allows for additional test cases to be appended to the file.
 Each of the programs has support for stdin (so far) and can be used with input redirection to execute through all
 of the test cases, so the only thing that should be edited is the input.txt file itself. 
 To run a program use a terminal/console, and type in the following within the corresponding directory:
 
 ```bash
-java -jar <program name>.jar
+java -jar <program name>.jar < input.txt
 ```
 
 Each of the programs are compiled with
