@@ -2,16 +2,37 @@
 
 ## Description
 
-Collection of various Hacker Rank problems written in Kotlin
+Collection of various Hacker Rank problems written in Kotlin.
 
-## Solved Categories
+## Categories in Progress
 
-* **Algorithms/warmup**
+* **Algorithms**
 
-## Preliminary Setup
+## Structure
 
-Java & Kotlinc should be installed in your system before executing the programs, as well as being added to your PATH.
-Like this:
+This repository aims to keep each category & sub categories in their own directory to reflect the structure of Hacker Rank's problem sets; e.g. algorithms -> warmup -> *problem*. Each problem will compile & able to be ran on the command line as well as, include a makefile & input.txt file to display the results. Each program is designed to consume the included input file.
+
+## Program Execution
+
+The following command is used to execute each of the programs:
+
+```bash
+java -jar <program name>.jar < input.txt
+```
+
+Additionally, a 'run' command is included with each makefile.
+
+## Program Compilation
+
+Each program has been compiled with the following command (included in the corresponding makefile):
+
+```~$ $kotlinc <program name>.kt -include-runtime -d <program name>.jar```
+
+At the time of writing, the compilation & execution of each of the programs has been done with Cygwin.
+
+## Setup
+
+The compilation & execution of each program requires a Java JDK & kotlinc (Kotlin Compiler) (found [here](https://kotlinlang.org/docs/tutorials/command-line.html). After installation of Java and/or kotlinc both should be saved in the PATH variable like:
 
 For Java
 ```bash
@@ -22,24 +43,7 @@ For Kotlinc
 ```bash
 export PATH=$PATH:"/cygdrive/C/kotlinc/bin/"
 ```
-*note:* Any path should work for kotlinc (found [here](https://kotlinlang.org/docs/tutorials/command-line.html))
 
-## Program Execution
+*note:* Any path is acceptable for kotlinc
 
-All programs are listed in their own directory, with an input.txt included. 
-The input.txt file contains test cases, and allows for additional test cases to be appended to the file.
-Each of the programs has support for stdin (so far) and can be used with input redirection to execute through all
-of the test cases, so the only thing that should be edited is the input.txt file itself. 
-To run a program use a terminal/console, and type in the following within the corresponding directory:
-
-```bash
-java -jar <program name>.jar < input.txt
-```
-
-Each of the programs are compiled with
-```bash
-kotlinc <program name>.kt -include-runtime -d <program name>.jar
-```
-However, a makefile is included with each program to avoid typing that repeatedly.
-
-So far this has been tested with cygwin, but the principle should hold for macOS & linux systems.
+Compilation & execution has been tested with Cygwin
